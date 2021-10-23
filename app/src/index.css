@@ -1,0 +1,103 @@
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #4542C2;
+}
+
+body {
+  margin: 0;
+  background: #E7E7E7;
+}
+
+.room-number {
+  position: absolute;
+  width: 228px;
+  height: 99px;
+  left: 29px;
+  top: 6px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 84px;
+
+  color: #FFFFFF;
+
+}
+
+.menu-button {
+  width: 195px;
+  height: 62px;
+
+  background: #DC326F;
+  border-radius: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 62px;
+  
+  text-align: center;
+  vertical-align: middle;
+  color: #E7E7E7;
+
+}
+
+.aut-button {
+  width: 195px;
+  height: 62px;
+
+  background: #DC326F;
+  border-radius: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 62px;
+  
+  text-align: center;
+  vertical-align: middle;
+  color: #E7E7E7;
+
+}
+
+.menu {
+  
+  height: 100%;
+}
+
+.submenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  position: relative;
+  left: 20%;
+}
+
+.wrapper {
+  width: 80%;
+  height: 1000px;
+  position: relative;
+  
+  left: 10%;
+  top: 70px;
+
+  background: #FFFFFF;
+  border-radius: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 62px;
+  
+  text-align: center;
+  vertical-align: middle;
+  color: green;
+
+}
