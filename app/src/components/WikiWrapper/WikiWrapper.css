@@ -1,0 +1,24 @@
+.wiki-wrapper {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 62px;
+  
+    text-align: center;
+    vertical-align: middle;
+    color: green;
+}
+
+.wrapper {
+    width: 80%;
+    height: 1000px;
+    position: relative;
+    
+    left: 10%;
+    top: 70px;
+  
+    background: #FFFFFF;
+    border-radius: 10px;
+  
+  }

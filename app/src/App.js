@@ -1,7 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header'
-import Content from './components/Content';
+import { MainWrapper } from './components/MainWrapper';
+import { ActivityWrapper } from './components/ActivityWrapper';
+import { WikiWrapper } from './components/WikiWrapper/WikiWrapper';
+import { GamingWrapper } from './components/GamingWrapper';
 
 export function App() {
   return (
@@ -24,10 +27,26 @@ export function App() {
     <>
       <Router>
         <Header/>
+    
+        <Switch>
+          <Route path="/activity">
+            <ActivityWrapper/>
+          </Route>
+          <Route path="/wiki">
+            <WikiWrapper/>
+          </Route>
+          <Route path="/gaming">
+            <GamingWrapper />
+          </Route>
+          <Route path="/">
+            <MainWrapper />
+          </Route>
+
+        </Switch>
+        
+      
       </Router>
-      <Router>
-        <Content/>
-      </Router>
+      
     </>
   );
 }

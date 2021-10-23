@@ -1,22 +1,16 @@
 import { Link } from 'react-router-dom'
+import { MenuButton } from './MenuButton';
+import { RoomNumber } from './RoomNumber';
 
 export default function Header() {
     return (
         <header>
             <div className='menu'>
-                <div className='room-number'>
-                    1106
-                </div>
+                <RoomNumber/>
                 <div className='submenu'>
-                    <div className='menu-button'>
-                        Активизм
-                    </div>
-                    <div className='menu-button'>
-                        Вики    
-                    </div>
-                    <div className='menu-button'>
-                        Игровая
-                    </div>
+                    <MenuButton title='Активизм' path='/activity'/>
+                    <MenuButton title='Вики' path='/wiki'/>
+                    <MenuButton title='Игровая' path='gaming'/>
                     <div className='aut-button'>
                         Войти
                     </div>
