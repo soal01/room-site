@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
-export function RoomNumber() {
+export function RoomNumber(props) {
+    const {click} = props
+
     return (
-        <Link to='/' style={{textDecoration: 'none'}}>
+        <Link to='/' onclick={click} style={{textDecoration: 'none'}}>
             <div className='room-number'>
                 1106
             </div>

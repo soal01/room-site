@@ -49,6 +49,25 @@ body {
   cursor: pointer;
 }
 
+.active-menu-button {
+  width: 195px;
+  height: 62px;
+
+  background: green;
+  border-radius: 10px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 62px;
+  
+  text-align: center;
+  vertical-align: middle;
+  color: #E7E7E7;
+  cursor: pointer;
+}
+
 .aut-button {
   width: 195px;
   height: 62px;

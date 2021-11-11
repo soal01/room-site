@@ -8,6 +8,7 @@
     text-align: center;
     vertical-align: middle;
     color: green;
+    align-items: flex-start;
 }
 
 .wrapper {

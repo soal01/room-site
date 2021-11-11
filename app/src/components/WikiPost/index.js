@@ -1,0 +1,1 @@
+export {WikiPost} from './WikiPost';

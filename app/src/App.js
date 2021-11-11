@@ -6,7 +6,9 @@ import { ActivityWrapper } from './components/ActivityWrapper';
 import { WikiWrapper } from './components/WikiWrapper/WikiWrapper';
 import { GamingWrapper } from './components/GamingWrapper';
 
+
 export function App() {
+
   return (
     /*<div className="App">
       <header className="App-header">
@@ -27,7 +29,6 @@ export function App() {
     <>
       <Router>
         <Header/>
-    
         <Switch>
           <Route path="/activity">
             <ActivityWrapper/>
