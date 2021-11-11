@@ -9,7 +9,6 @@ export function WikiWrapper(props) {
         <div className='wrapper'>
             <div className='wiki-wrapper'>
                 <WikiCreateButton/>
-                Вики находится в разработке
                 <WikiPost>
                     
                 </WikiPost>

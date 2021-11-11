@@ -5,7 +5,7 @@ export function RoomNumber(props) {
     const {click} = props
 
     return (
-        <Link to='/' onclick={click} style={{textDecoration: 'none'}}>
+        <Link to='/' onClick={click} style={{textDecoration: 'none'}}>
             <div className='room-number'>
                 1106
             </div>

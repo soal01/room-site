@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 
 export function MenuButton(props) {
@@ -9,7 +9,7 @@ export function MenuButton(props) {
         button = "active-menu-button"
     }
     return (
-        <Link to={path} onclick={click} style={{textDecoration: 'none'}}>
+        <Link to={path} onClick={click} style={{textDecoration: 'none'}}>
             <div  className={button} >
                 {title}
             </div>

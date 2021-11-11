@@ -5,6 +5,7 @@ import { MainWrapper } from './components/MainWrapper';
 import { ActivityWrapper } from './components/ActivityWrapper';
 import { WikiWrapper } from './components/WikiWrapper/WikiWrapper';
 import { GamingWrapper } from './components/GamingWrapper';
+import { WikiCreateForm } from './components/WikiCreatePost';
 
 
 export function App() {
@@ -32,6 +33,9 @@ export function App() {
         <Switch>
           <Route path="/activity">
             <ActivityWrapper/>
+          </Route>
+          <Route path="/wiki/create_article">
+            <WikiCreateForm/>
           </Route>
           <Route path="/wiki">
             <WikiWrapper/>
