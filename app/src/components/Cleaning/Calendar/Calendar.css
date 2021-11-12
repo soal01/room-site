@@ -1,0 +1,116 @@
+ul {
+    list-style-type: none;
+}
+
+.calendar {
+    position: relative;
+    top: 30px;
+    width: 80%;
+    /*height: 800px;*/
+    background: #1abc9c;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 0px 0px;
+    width: 100%;
+    background: #1abc9c;
+    text-align: center;
+    /*box-sizing: border-box;*/
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.weekdays {
+    margin: 0;
+    background-color:#ddd;
+}
+
+.weekday {
+    /*display: inline-block;*/
+    border-collapse: collapse;
+    width: 13.6%;
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+}
+
+.day label {
+    color: black;
+    position: absolute;
+    top: 5%;
+    margin: 0 auto;
+}
+
+.week {
+    width: 100%;
+    background: brown;
+}
+
+.days {
+    width: 100%;
+    border-width: 0px;
+}
+
+
+.day {
+    width: 13.6%;
+    position: relative;
+    height: 80px;
+    background: blanchedalmond;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    
+}
+
+/*.weekdays {
+    margin: 0;
+    padding: 5px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+}
+*/
+/*.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+    border-width: 3px;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+    border: black;
+    border-width: 3px;
+}
+
+.days li .active {
+    padding: 18px;
+    background: #1abc9c;
+    color: white !important
+}*/
