@@ -4,17 +4,20 @@
     font-weight: normal;
     font-size: 42px;
     line-height: 62px;
+    height: 100%;
   
     text-align: center;
     vertical-align: middle;
     color: green;
-    align-items: flex-start;
     
+    /*display: flex;
+    align-items: flex-start;
+    flex-direction: column;*/
 }
 
 .wrapper {
     width: 80%;
-    height: 1000px;
+    height: 100%;
     position: relative;
     
     left: 10%;

@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 
 export function WikiCreateButton() {
     const dispatch = useDispatch();
+    
     return (
         /*<div className='wiki-create-button'
             onClick={(event) => {
