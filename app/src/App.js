@@ -9,13 +9,12 @@ import { WikiCreateForm } from './components/WikiCreatePost';
 import { Cleaning } from './components/Cleaning';
 import { Homework } from './components/Homework';
 import { Housework } from './components/Housework';
-import { Calendar, momentLocalizer } from 'react-big-calendar'
-import moment from 'moment';
+import { WikiPage } from './components/WikiPost/WikiPost';
 
 export function App() {
 
 
-  const localizer = momentLocalizer(moment);
+  
   return (
     /*<div className="App">
       <header className="App-header">
@@ -41,7 +40,7 @@ export function App() {
             <ActivityWrapper>
               <Switch>
                 <Route path="/activity/cleaning">
-                  <Cleaning localizer={localizer}/>
+                  <Cleaning />
                 </Route>
                 <Route path="/activity/housework">
                   <Housework/>
@@ -51,6 +50,9 @@ export function App() {
                 </Route>
               </Switch>
               </ActivityWrapper>
+          </Route>
+          <Route path="/wiki/post/:postId">
+            <WikiPage/>
           </Route>
           <Route path="/wiki/create_article">
             <WikiCreateForm/>

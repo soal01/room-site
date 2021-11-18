@@ -18,3 +18,46 @@
     line-height: 60px;
     color: black;
 }
+
+.wrapper {
+    width: 80%;
+    height: 100%;
+    position: relative;
+    
+    left: 10%;
+    top: 70px;
+  
+    background: #FFFFFF;
+    border-radius: 10px;
+  
+}
+  
+.wrapper-wiki-page {
+    font-size: 36px;
+    line-height: 60px;
+    color: black;
+    text-align: center;
+    /*display: flex;
+    align-items: center;
+    flex-direction: column;*/
+}
+
+
+.back-button-wiki-page {
+    cursor: pointer;
+    width: 250px;
+    height: 66px;
+    /*position: relative;
+    top: 10%;
+    */
+    text-align: center;
+    color: #FFFFFF;
+    background: #777CF7;
+    border-radius: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 52px;
+    line-height: 60px;
+    margin: 0 auto;
+}
