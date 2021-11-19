@@ -10,7 +10,7 @@ export function WikiPost(props) {
     const {title} = post;
    
     return (
-        <Link to={'/wiki/post/' + id} style={{textDecoration: 'none'}}>
+        <Link to={'/wiki/post/' + id} className='link'>
             <div className='wiki-post'>
                 <div className='wiki-post-title'>
                     {title}
@@ -31,7 +31,7 @@ export function WikiPage(props) {
             <div className='wrapper-wiki-page'>
                 <h2>{post.title}</h2>
                 <p>{post.description}</p>
-                <Link to='/wiki' style={{textDecoration: 'none'}}>
+                <Link to='/wiki' className='link'>
                     <div className='back-button-wiki-page'>
                         Назад
                     </div>

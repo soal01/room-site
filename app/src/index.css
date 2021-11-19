@@ -14,6 +14,10 @@ body {
   /*verflow-y: hidden;*/
 }
 
+.link {
+  text-decoration: none;
+}
+
 .room-number {
   position: absolute;
   width: 228px;
