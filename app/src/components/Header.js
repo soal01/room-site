@@ -15,10 +15,9 @@ export default function Header() {
                 <div className='submenu'>
                     <MenuButton title='Активизм' path='/activity/cleaning' onClick={() => setPage(1)} curPage={page} page={1}/>
                     <MenuButton title='Вики' path='/wiki' onClick={() => setPage(2)} curPage={page} page={2}/>
-                    <MenuButton title='Игровая' path='gaming' onClick={() => setPage(3)} curPage={page} page={3}/>
-                    <div className='aut-button'>
-                        Войти
-                    </div>
+                    <MenuButton title='Игровая' path='/gaming' onClick={() => setPage(3)} curPage={page} page={3}/>
+                    <MenuButton title='Войти' path='/authorisation' onClick={() => setPage(4)} curPage={page} page={4}/>
+                    
                 </div>
             </div>
         </header>

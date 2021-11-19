@@ -10,6 +10,7 @@ import { Cleaning } from './components/Cleaning';
 import { Homework } from './components/Homework';
 import { Housework } from './components/Housework';
 import { WikiPage } from './components/WikiPost/WikiPost';
+import { Authorisation } from './components/Authorisation/Authorisation';
 
 export function App() {
 
@@ -62,6 +63,9 @@ export function App() {
           </Route>
           <Route path="/gaming">
             <GamingWrapper />
+          </Route>
+          <Route path="/authorisation">
+            <Authorisation />
           </Route>
           <Route path="/">
             <MainWrapper />
