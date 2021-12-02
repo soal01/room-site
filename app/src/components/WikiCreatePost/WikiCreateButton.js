@@ -27,7 +27,7 @@ export function WikiCreateButton() {
                 Создать статью
             </div>
             */
-        <Link to='/wiki/create_article' style={{textDecoration: 'none'}}>
+        <Link to='/wiki/create_article' className='link'>
             <div className='wiki-create-button'>
                 Создать статью
             </div>

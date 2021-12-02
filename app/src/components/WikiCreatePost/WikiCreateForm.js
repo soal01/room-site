@@ -63,7 +63,7 @@ export function WikiCreateForm(props) {
                     />
                 </div>
                 
-                <Link to='/wiki' style={{textDecoration: 'none'}}>
+                <Link to='/wiki' className='link'>
                     <div className='back-button'>
                         Назад
                     </div>
