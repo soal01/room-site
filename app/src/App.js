@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect, } from 'react-router-dom';
 import Header from './components/Header'
 import { MainWrapper } from './components/MainWrapper';
 import { ActivityWrapper } from './components/ActivityWrapper';
@@ -11,10 +11,26 @@ import { Homework } from './components/Homework';
 import { Housework } from './components/Housework';
 import { WikiPage } from './components/WikiPost/WikiPost';
 import { Authorisation } from './components/Authorisation/Authorisation';
+import { ApiClientService } from './services/ApiClientService';
 
 export function App() {
+  const [user, setUser] = React.useState(null);
+  const [isLogin, setIsLogin] = React.useState(
+    window.localStorage.getItem('ACCESS')
+  );
 
+  const fetchUser = async () => {
+    const user = await ApiClientService('user/current');
+    console.log('here1');
+    console.log(user);
+    setUser(user['username']);
+  };
 
+  React.useEffect(() => {
+    if (isLogin) {
+      void fetchUser();
+    }
+  }, [isLogin]);
   
   return (
     /*<div className="App">
@@ -35,7 +51,7 @@ export function App() {
     </div>*/
     <>
       <Router>
-        <Header/>
+        <Header isLogin={isLogin} setIsLogin={setIsLogin}/>
         <Switch>
           <Route path="/activity/">
             <ActivityWrapper>
@@ -65,10 +81,13 @@ export function App() {
             <GamingWrapper />
           </Route>
           <Route path="/authorisation">
-            <Authorisation />
+            <Authorisation setIsLogin={setIsLogin}/>
+          </Route>
+          <Route path='/logout'>
+            <Redirect to='/' />
           </Route>
           <Route path="/">
-            <MainWrapper />
+            <MainWrapper user={user} isLogin={isLogin}/>
           </Route>
 
         </Switch>

@@ -1,10 +1,23 @@
 import React from "react";
 import './Authorisation.css';
+import { useAuth } from "../hooks/useAuth";
 
 
-export function Authorisation() {
+export function Authorisation(props) {
+    const { setIsLogin } = props;
     const [login, setLogin] = React.useState();
     const [password, setPassword] = React.useState();
+    const [error, setError] = React.useState();
+    const { onAuth } = useAuth(setIsLogin, setError);
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        if (!login) {
+
+        }
+        await onAuth(login, password);
+    };
+
 
     return (
         <div className="wrapper">
@@ -35,6 +48,7 @@ export function Authorisation() {
                     <button
                         type='submit'
                         className='login-button'
+                        onClick={handleSubmit}
                     >
                         Войти
                     </button>

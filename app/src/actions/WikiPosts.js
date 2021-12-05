@@ -5,9 +5,9 @@ import { ApiClientService } from '../services/ApiClientService';
 const wikiPostSchema = new schema.Entity('wiki_post');
 
 function setPosts(data) {
-    console.log(data);
+    //console.log(data);
     const {result, entities} = normalize(data, [wikiPostSchema]);
-    console.log(result);
+    //console.log(result);
     
     return {
         type: SET_POST_LIST,

@@ -1,15 +1,15 @@
 const apiBase = 'http://localhost:8000/api/';
 
 export async function ApiClientService(url, options = {}) {
-  //const access = window.localStorage.getItem('ACCESS');
+  const access = window.localStorage.getItem('ACCESS');
   const headers = options.headers || {};
-  /*if (access) {
+  if (access) {
     headers['Authorization'] = `Bearer ${access}`;
-  }*/
+  }
 
   let response = await fetch(`${apiBase}${url}`, { ...options, headers });
 
-  /*if (response.status === 401) {
+  if (response.status === 401) {
     const refresh = window.localStorage.getItem('REFRESH');
     const refreshResponse = await fetch(`${apiBase}token/refresh/`, {
       method: 'POST',
@@ -27,7 +27,7 @@ export async function ApiClientService(url, options = {}) {
     headers['Authorization'] = `Bearer ${refreshData.access}`;
 
     response = await fetch(`${apiBase}${url}`, { ...options, headers });
-  }*/
+  }
   
 
   const data = await response.json();

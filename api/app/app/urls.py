@@ -18,6 +18,11 @@ from django.urls import path, include
 from rest_framework import routers
 
 from wiki_posts.views import WikiPostListView
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+from .view import Login, Logout, CurrentUser
 
 router = routers.DefaultRouter()
 router.register('wiki_posts', WikiPostListView)
@@ -25,6 +30,11 @@ router.register('wiki_posts', WikiPostListView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('logout/', Logout.as_view(), name='logout'),
+    path('login/', Login.as_view(), name='login'),
     path('wiki_posts/', include('wiki_posts.urls'), name="wiki_posts"),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/', include(router.urls)),
+    path('api/user/current', CurrentUser.as_view(), name='current_user'),
 ]
