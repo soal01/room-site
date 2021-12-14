@@ -114,3 +114,12 @@ ul {
     background: #1abc9c;
     color: white !important
 }*/
+
+
+.prev_button {
+    height: 30px;
+}
+
+.next_button {
+    height: 30px;
+}
