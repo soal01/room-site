@@ -59,11 +59,15 @@ export function Calendar(props) {
     const info = useSelector((state) => {
         return state.cleaningMounths.mounths[mounthList[current_mounth]];
     });
+
+    
     
     React.useEffect(()=> {
         dispatch(fetchCleaningMounths());
+        
     }, []);
 
+    
     
 
     const nextClick = (event) => {
@@ -136,7 +140,7 @@ export function Calendar(props) {
                 <th className="weekday">Суббота</th>
                 <th className="weekday">Воскресение</th>
             </tr>
-            {drawDays(mounth)}
+            {drawDays(get_mounth(info))}
 
         </table>
         <button className="prev_button"

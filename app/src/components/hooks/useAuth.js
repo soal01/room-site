@@ -14,15 +14,32 @@ export function useAuth(setIsLogin, setError) {
             password,
           }),
         });
-        const data = await response.json();
-    
-        if (response.method !== 200) {
-          setError(data.detail);
+        try {
+          const data = await response.json();
+          
+          if (response.method !== 200) {
+            setError(data.detail);
+            console.log('ewonvoewnoew11111'); 
+          } 
+          
+          setIsLogin(true);
+          window.localStorage.setItem('ACCESS', data.access);
+          window.localStorage.setItem('REFRESH', data.refresh);
+          history.push('/');
         }
-        setIsLogin(true);
-        window.localStorage.setItem('ACCESS', data.access);
-        window.localStorage.setItem('REFRESH', data.refresh);
-        history.push('/');
+        catch {
+          window.localStorage.clear();
+            setIsLogin(false);
+          /*if (window.localStorage.getItem('ACCESS') == null) {
+            history.push('/');
+          } else {
+            window.localStorage.clear();
+            setIsLogin(false);
+          }*/
+        }
+        
+        console.log(response.method);
+        
     };
     return {onAuth};
 }

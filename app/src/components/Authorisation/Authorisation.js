@@ -10,12 +10,27 @@ export function Authorisation(props) {
     const [error, setError] = React.useState();
     const { onAuth } = useAuth(setIsLogin, setError);
 
+    React.useEffect(() => {
+        if (error) {
+          setError('');
+        }
+      }, [login, password]);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (!login) {
-
+            setError('Введите логин');
+            return;
         }
-        await onAuth(login, password);
+        if (!password) {
+            setError('Введите пароль');
+            return;
+        }
+        try {
+            await onAuth(login, password);
+        } catch {
+            //setError('Возникли проблемы, авторизируйтесь ещё раз');
+        }
     };
 
 
@@ -45,6 +60,9 @@ export function Authorisation(props) {
                         }}
                     />
                 </div>
+                {error ? 
+                <div className='error-message'>{error}</div> :
+                <div className='error-message'></div>}
                     <button
                         type='submit'
                         className='login-button'
