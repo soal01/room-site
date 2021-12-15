@@ -2,16 +2,18 @@ import React from 'react';
 import './WikiCreatePost.css';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
+import {ApiClientService} from '../../services/ApiClientService';
 
 export function WikiCreateForm(props) {
     /*const {
-        onButtonClick
+        isLogin
     } = props;*/
+    const history = useHistory();
     const [title, setTitle] = React.useState();
     const [description, setDescription] = React.useState();
 
 
-    const onButtonClick = (post) => {
+    /*const onButtonClick = (post) => {
         fetch('http://localhost:3001/wiki-posts',{
             headers: {
                 'Content-Type': 'Application/json',
@@ -21,6 +23,19 @@ export function WikiCreateForm(props) {
             })
             .then((response) => response.json())
             .then((data) => history.push('/wiki'));
+    };*/
+
+    const onButtonClick = async (post) => {
+        const formData = new FormData();
+        for (let postKey in post) {
+          formData.append(postKey, post[postKey]);
+        }
+    
+        const data = await ApiClientService('wiki_posts/', {
+          method: 'POST',
+          body: formData,
+        });
+        history.push('/wiki');
     };
 
     const handleClick = (event) => {
@@ -32,7 +47,7 @@ export function WikiCreateForm(props) {
         onButtonClick(article);
     };
 
-    const history = useHistory();
+    
 
     
 
@@ -75,8 +90,7 @@ export function WikiCreateForm(props) {
                         className='submit-button'
                     >
                         Сохранить статью
-                    </button>
-               
+                    </button> 
             </form>
             
             

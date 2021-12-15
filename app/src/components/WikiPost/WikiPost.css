@@ -6,8 +6,22 @@
     position: relative;
     top: 50px;
     background: #FFFFFF;
-    border: 3px solid rgba(199, 199, 199, 0.8);
+    border: 3px solid rgba(51, 51, 255, 0.7);
     margin: 5px  0;
+    border-radius: 20px;
+}
+
+.wiki-post:hover{
+    width: 100%;
+    height: 60px;
+    /*left: 143px;
+    top: 254px;*/
+    position: relative;
+    top: 50px;
+    background: #00CC99;
+    border: 3px solid rgba(51, 51, 255, 0.7);
+    margin: 5px  0;
+    border-radius: 20px;
 }
 
 .wiki-post-title {

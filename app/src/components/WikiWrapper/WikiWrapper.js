@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchWikiPosts } from "../../actions/WikiPosts";
 
 export function WikiWrapper(props) {
+    const {isLogin} = props;
     const dispatch = useDispatch();
     const postList = useSelector((state) => {
         //console.log(state);
@@ -24,7 +25,10 @@ export function WikiWrapper(props) {
     return (
         <div className='wrapper'>
             <div className='wiki-wrapper'>
-                <WikiCreateButton/>
+                {isLogin ?
+                <WikiCreateButton/>:
+                <div></div>
+                }
                 {postList.map((postId)=>(
                     <WikiPost id={postId}/>
                 ))}

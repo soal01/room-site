@@ -72,10 +72,10 @@ export function App() {
             <WikiPage/>
           </Route>
           <Route path="/wiki/create_article">
-            <WikiCreateForm/>
+            <WikiCreateForm />
           </Route>
           <Route path="/wiki">
-            <WikiWrapper/>
+            <WikiWrapper isLogin={isLogin}/>
           </Route>
           <Route path="/gaming">
             <GamingWrapper />
